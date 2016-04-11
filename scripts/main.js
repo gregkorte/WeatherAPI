@@ -1,4 +1,6 @@
-var url = 'http://api.wunderground.com/api/1e1243f5d9365714/geolookup/q/'
+'use-strict'
+
+let url = 'http://api.wunderground.com/api/1e1243f5d9365714/geolookup/q/'
 
 //10dayForecast
 //http://api.wunderground.com/api/1e1243f5d9365714/geolookup/q/37.776289,-122.395234.json
