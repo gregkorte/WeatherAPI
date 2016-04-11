@@ -2,13 +2,20 @@
 <html>
 <head>
 	<title>5 Day Weather Forecast</title>
+	<meta charset='utf-8'>
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
 </head>
 <header>
 	<h1>5 Day Weather Forecast</h1>
 </header>
 <section>
-<button></button>
+<div class="zipCode">
+<form>
+<input class="zipCodeInput" placeholder="Enter Zip Code" class="zipcode" type="text" value = "" pattern="\d*">
+<input class="button" type="button" value="Get Forecast!">
+</div>
+<div class="weatherInfo">
+</div>
 </section>
 <footer></footer>
 <script src="scripts/main.js"></script>
