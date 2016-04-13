@@ -1,14 +1,12 @@
-'use-strict'
+var url = 'http://api.wunderground.com/api/1e1243f5d9365714/forecast10day/q/'
 
-let url = 'http://api.wunderground.com/api/1e1243f5d9365714/geolookup/q/'
+// navigator.geolocation.getCurrentPosition(function(position) {
+//   do_something(position.coords.latitude, position.coords.longitude);
+// });
 
-//10dayForecast
-//http://api.wunderground.com/api/1e1243f5d9365714/geolookup/q/37.776289,-122.395234.json
-
-function getJSONP(url, lat, lon, request){
+function getJSONP(url, request){
 	var $script = document.createElement('script');
-	$script.src = url + lat + ',' + lon + '?callback=' + request;
-    console.log($script.src)
+	$script.src = url + '37221.json' + '?callback=' + request;
 	document.body.appendChild($script);
 }
 
@@ -85,14 +83,7 @@ function showWeatherData(jsondata){
 }
 
 document.addEventListener("DOMContentLoaded", function(){
-    var lat;
-    var lon;
-  navigator.geolocation.getCurrentPosition(function(position) {
-    console.log(position.coords.latitude)
-      lat = position.coords.latitude;
-      lon = position.coords.longitude;
-    });
-  getJSONP(url, lat, lon, 'showWeatherData');
+  getJSONP(url, 'showWeatherData');
 
 var $button = document.querySelector('.button');
 var $target = document.querySelector('section');
