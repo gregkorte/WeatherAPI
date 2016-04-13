@@ -97,5 +97,6 @@ $(document).ready(function(){
         return;
     })
 
+    $('#zipcode').focus();
     geoLocate();
 })
