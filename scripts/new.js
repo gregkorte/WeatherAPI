@@ -43,6 +43,8 @@ $(document).ready(function(){
         let state = response.location.state;
         let zip = response.location.zip;
         let url = `${zipUrl}${state}/${city}.json`
+        let cityState = `<h3>${city}, ${state}</h3>`;
+        $('#location').html(cityState)
         $.ajax({
             type: 'GET',
             url: url,
